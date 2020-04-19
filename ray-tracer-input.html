@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ray-Tracer Input</title>
+</head>
+<body>
+    <h1>Sphere 1</h1>
+        Sphere X location: <input type="number" id="sphere1x"> <br />
+        Sphere Y location: <input type="number" id="sphere1y"> <br />
+        Sphere Z location: <input type="number" id="sphere1z"> <br />
+        Sphere radius: <input type="number" id="sphere1ra"> <br />
+        Sphere color red value: <input type="number" id="sphere1cr"> <br />
+        Sphere color green value: <input type="number" id="sphere1cg"> <br />
+        Sphere color blue value: <input type="number" id="sphere1cb"> <br />
+        Sphere specular red value: <input type="number" id="sphere1sr"> <br />
+        Sphere specular green value: <input type="number" id="sphere1sg"> <br />
+        Sphere specular blue value: <input type="number" id="sphere1sb"> <br />
+        Sphere specular strength: <input type="number" id="sphere1ss"> <br />
+        Sphere reflectivity: <input type="number" id="sphere1re"> <br />
+    <h1>Sphere 2</h1>
+        Sphere X location: <input type="number" id="sphere2x"> <br />
+        Sphere Y location: <input type="number" id="sphere2y"> <br />
+        Sphere Z location: <input type="number" id="sphere2z"> <br />
+        Sphere radius: <input type="number" id="sphere2ra"> <br />
+        Sphere color red value: <input type="number" id="sphere2cr"> <br />
+        Sphere color green value: <input type="number" id="sphere2cg"> <br />
+        Sphere color blue value: <input type="number" id="sphere2cb"> <br />
+        Sphere specular red value: <input type="number" id="sphere2sr"> <br />
+        Sphere specular green value: <input type="number" id="sphere2sg"> <br />
+        Sphere specular blue value: <input type="number" id="sphere2sb"> <br />
+        Sphere specular strength: <input type="number" id="sphere2ss"> <br />
+        Sphere reflectivity: <input type="number" id="sphere2re"> <br />
+    <h1>Sphere 3</h1>
+        Sphere X location: <input type="number" id="sphere3x"> <br />
+        Sphere Y location: <input type="number" id="sphere3y"> <br />
+        Sphere Z location: <input type="number" id="sphere3z"> <br />
+        Sphere radius: <input type="number" id="sphere3ra"> <br />
+        Sphere color red value: <input type="number" id="sphere3cr"> <br />
+        Sphere color green value: <input type="number" id="sphere3cg"> <br />
+        Sphere color blue value: <input type="number" id="sphere3cb"> <br />
+        Sphere specular red value: <input type="number" id="sphere3sr"> <br />
+        Sphere specular green value: <input type="number" id="sphere3sg"> <br />
+        Sphere specular blue value: <input type="number" id="sphere3sb"> <br />
+        Sphere specular strength: <input type="number" id="sphere3ss"> <br />
+        Sphere reflectivity: <input type="number" id="sphere3re"> <br />
+
+    <button onclick="parseData()">Submit Request</button>
+    <script>
+        function parseData() {
+            var sph1x = page.getElementById("sphere1x");
+            var sph1y = page.getElementById("sphere1y");
+            var sph1z = page.getElementById("sphere1z");
+            var sph1z = page.getElementById("sphere1z");
+            var requestToSend = [
+                {
+                    "center": {
+                        "x": page.getElementById("sphere1x"),
+                        "y": page.getElementById("sphere1y"),
+                        "z": page.getElementById("sphere1z")
+                    },
+                    "radius": page.getElementById("sphere1ra"),
+                    "color": {
+                        "r": page.getElementById("sphere1cr"),
+                        "g": page.getElementById("sphere1cg"),
+                        "b": page.getElementById("sphere1cb")
+                    },
+                    "specular": {
+                        "r": page.getElementById("sphere1sr"),
+                        "g": page.getElementById("sphere1sg"),
+                        "b": page.getElementById("sphere1sb"),
+                        "strength": page.getElementById("sphere1ss")
+                    },
+                    "reflectivity": page.getElementById("sphere1re")
+                },
+                {
+                    "center": {
+                        "x": page.getElementById("sphere2x"),
+                        "y": page.getElementById("sphere2y"),
+                        "z": page.getElementById("sphere2z")
+                    },
+                    "radius": page.getElementById("sphere2ra"),
+                    "color": {
+                        "r": page.getElementById("sphere2cr"),
+                        "g": page.getElementById("sphere2cg"),
+                        "b": page.getElementById("sphere2cb")
+                    },
+                    "specular": {
+                        "r": page.getElementById("sphere2sr"),
+                        "g": page.getElementById("sphere2sg"),
+                        "b": page.getElementById("sphere2sb"),
+                        "strength": page.getElementById("sphere2ss")
+                    },
+                    "reflectivity": page.getElementById("sphere2re")
+                },
+                {
+                    "center": {
+                        "x": page.getElementById("sphere3x"),
+                        "y": page.getElementById("sphere3y"),
+                        "z": page.getElementById("sphere3z")
+                    },
+                    "radius": page.getElementById("sphere3ra"),
+                    "color": {
+                        "r": page.getElementById("sphere3cr"),
+                        "g": page.getElementById("sphere3cg"),
+                        "b": page.getElementById("sphere3cb")
+                    },
+                    "specular": {
+                        "r": page.getElementById("sphere3sr"),
+                        "g": page.getElementById("sphere3sg"),
+                        "b": page.getElementById("sphere3sb"),
+                        "strength": page.getElementById("sphere3ss")
+                    },
+                    "reflectivity": page.getElementById("sphere3re")
+                }
+            ]
+            // send to api gateway
+        }
+    </script>
+</body>
+</html>
