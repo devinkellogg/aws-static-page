@@ -45,13 +45,10 @@
         Sphere specular strength: <input type="number" id="sphere3ss"> <br />
         Sphere reflectivity: <input type="number" id="sphere3re"> <br />
 
-    <button onclick="parseData()">Submit Request</button>
+    <button id="submit" onclick="parseData()">Submit Request</button>
     <script>
         function parseData() {
-            var sph1x = page.getElementById("sphere1x");
-            var sph1y = page.getElementById("sphere1y");
-            var sph1z = page.getElementById("sphere1z");
-            var sph1z = page.getElementById("sphere1z");
+            document.getElementById("submit").remove();
             var requestToSend = [
                 {
                     "center": {
@@ -115,6 +112,7 @@
                 }
             ]
             // send to api gateway
+            // once you get the response append
         }
     </script>
 </body>
